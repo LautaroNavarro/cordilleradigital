@@ -1,1 +1,2 @@
-web: python3 manage.py runserver 0.0.0.0:8000
+release: python manage.py migrate
+web: gunicorn cordilleradigital.cordilleradigital.wsgi
