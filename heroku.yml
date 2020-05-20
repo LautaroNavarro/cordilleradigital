@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: gunicorn cordilleradigital.cordilleradigital.wsgi
+  web: gunicorn cordilleradigital.cordilleradigital.wsgi --log-file -
