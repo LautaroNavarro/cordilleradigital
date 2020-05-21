@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: gunicorn cordilleradigital.cordilleradigital.wsgi --log-file -
+  web: python ./cordilleradigital/manage.py runserver 0.0.0.0:$PORT
