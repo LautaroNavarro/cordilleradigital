@@ -17,7 +17,7 @@ const Container = styled.div`
 const Title = styled.p`
 	color: ${({theme}) => theme.colors.text};
 	text-transform: uppercase;
-	font-size: 10vw;
+	font-size: 60px;
 	font-weight: bold;
 `;
 

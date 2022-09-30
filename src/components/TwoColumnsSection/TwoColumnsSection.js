@@ -43,17 +43,6 @@ const IconContainer = styled(WidthContainer)`
 	align-items: center;
 `;
 
-const RowSeparator = styled(Row)`
-	align-items: center;
-   @media (max-width: 900px) {
-        flex-direction: column;
-    }
-`;
-
-const CarouselCointainer = styled(WidthContainer)`
-	width: 90%;
-	margin-bottom: 40px;
-`;
 
 const TwoColumnsSection = () => {
 	return (
@@ -66,16 +55,16 @@ const TwoColumnsSection = () => {
 				<Line />
 			</TitleContainer>
 			<Spacer height={30}/>
-			<RowSeparator>
+			<Row style={{alignItems: 'center'}}>
 				<WidthContainer width={'50%'}>
-					<CarouselCointainer>
+					<WidthContainer width={'90%'}>
 						<Carousel list={[
 							<Image src={screenShot1}/>,
 							<Image src={screenShot2}/>,
 							<Image src={screenShot3}/>,
 							<Image src={screenShot4}/>,
 						]}/>
-					</CarouselCointainer>
+					</WidthContainer>
 				</WidthContainer>
 				<WidthContainer width={'50%'}>
 					<WidthContainer width={'90%'}>
@@ -84,7 +73,7 @@ const TwoColumnsSection = () => {
 								<FontAwesomeIcon icon={faLanguage} size="1x" inverse/>
 							</IconContainer>
 							<WidthContainer width={'95%'}>
-								<LocalTitle>&nbsp;Multiple languages</LocalTitle>
+								<LocalTitle>Multiple languages</LocalTitle>
 								<LocalDescription>You are gonna be able to switch between different languages, like English and Spanish, more in the way.</LocalDescription>
 							</WidthContainer>
 						</Row>
@@ -93,7 +82,7 @@ const TwoColumnsSection = () => {
 								<FontAwesomeIcon icon={faArrowsRotate} size="1x" inverse/>
 							</IconContainer>
 							<WidthContainer width={'95%'}>
-								<LocalTitle>&nbsp;Switchable team positions</LocalTitle>
+								<LocalTitle>Switchable team positions</LocalTitle>
 								<LocalDescription>The set finished and the team switch positions? No problem, you can also switch them.</LocalDescription>
 							</WidthContainer>
 						</Row>
@@ -102,7 +91,7 @@ const TwoColumnsSection = () => {
 								<FontAwesomeIcon icon={faPalette} size="1x" inverse/>
 							</IconContainer>
 							<WidthContainer width={'95%'}>
-								<LocalTitle>&nbsp;Customizable matches</LocalTitle>
+								<LocalTitle>Customizable matches</LocalTitle>
 								<LocalDescription>Set the name of the teams, the colors and even the match sets.</LocalDescription>
 							</WidthContainer>
 						</Row>
@@ -111,7 +100,7 @@ const TwoColumnsSection = () => {
 								<FontAwesomeIcon icon={faBookOpen} size="1x" inverse/>
 							</IconContainer>
 							<WidthContainer width={'95%'}>
-								<LocalTitle>&nbsp;Match summary</LocalTitle>
+								<LocalTitle>Match summary</LocalTitle>
 								<LocalDescription>See the summary of the match, set by set, point by point.</LocalDescription>
 							</WidthContainer>
 						</Row>
@@ -120,7 +109,7 @@ const TwoColumnsSection = () => {
 								<FontAwesomeIcon icon={faCircleArrowDown} size="1x" inverse/>
 							</IconContainer>
 							<WidthContainer width={'95%'}>
-								<LocalTitle>&nbsp;Local match</LocalTitle>
+								<LocalTitle>Local match</LocalTitle>
 								<LocalDescription>Play your own private match wherever you want, without needing internet connection.</LocalDescription>
 							</WidthContainer>
 						</Row>
@@ -129,7 +118,7 @@ const TwoColumnsSection = () => {
 								<FontAwesomeIcon icon={faGlobe} size="1x" inverse/>
 							</IconContainer>
 							<WidthContainer width={'95%'}>
-								<LocalTitle>&nbsp;Online match</LocalTitle>
+								<LocalTitle>Online match</LocalTitle>
 								<LocalDescription>Share your match in real time with your friends with the access code.</LocalDescription>
 							</WidthContainer>
 						</Row>
@@ -138,7 +127,7 @@ const TwoColumnsSection = () => {
 								<FontAwesomeIcon icon={faMoon} size="1x" inverse/>
 							</IconContainer>
 							<WidthContainer width={'95%'}>
-								<LocalTitle>&nbsp;Dark mode</LocalTitle>
+								<LocalTitle>Dark mode</LocalTitle>
 								<LocalDescription>Nice and clean, switchable dark and light modes.</LocalDescription>
 							</WidthContainer>
 						</Row>
@@ -147,13 +136,13 @@ const TwoColumnsSection = () => {
 								<FontAwesomeIcon icon={faVolumeHigh} size="1x" inverse/>
 							</IconContainer>
 							<WidthContainer width={'95%'}>
-								<LocalTitle>&nbsp;Sounds</LocalTitle>
+								<LocalTitle>Sounds</LocalTitle>
 								<LocalDescription>Sounds for match controlls, in both online and offline modes.</LocalDescription>
 							</WidthContainer>
 						</Row>
 					</WidthContainer>
 				</WidthContainer>
-			</RowSeparator>
+			</Row>
 			<Spacer height={100}/>
 			</WidthContainer>
 		</Container>
