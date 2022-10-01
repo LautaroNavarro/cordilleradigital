@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import background from './../../assets/background.webp';
+import background from './../../assets/voleybackground.webp';
 import logo from './../../assets/logo.png'
 import WidthContainer from './../WidthContainer/WidthContainer';
 import Row from './../Row/Row';
@@ -45,6 +45,7 @@ const Title = styled.p`
 	color: ${({theme}) => theme.colors.text};
 	text-transform: uppercase;
 	margin-left: 10px;
+  cursor: pointer;
 `;
 
 const Link = styled.a`
@@ -60,6 +61,11 @@ const RightItems = styled.div`
 `;
 
 const NavBar = () => {
+
+  const clickLogo = () => {
+    window.location.replace('/');
+  }
+
 	return (
 		<Container>
 			<ContainerInner>
@@ -67,13 +73,12 @@ const NavBar = () => {
 					<StyledRow>
 						<StyledRow>
 							{/*<Logo src={logo} />*/}
-							<Title>Voley score board</Title>
+							<Title onClick={clickLogo}>Cordillera Digital</Title>
 						</StyledRow>
 						<RightItems>
 							<StyledRow>
-								<Link href="#Home" >Home</Link>
-								<Link href="#PrivacyPolicy" >Privacy</Link>
-								<Link href="#Support" >Support</Link>
+								<Link href="/#Apps" >APPS</Link>
+								<Link href="/#Contact" >CONTACT</Link>
 							</StyledRow>
 						</RightItems>
 					</StyledRow>

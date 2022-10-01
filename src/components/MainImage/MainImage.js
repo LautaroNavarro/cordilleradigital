@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import backgroundImage from './../../assets/background.webp';
-
 const Container = styled.div`
 	width: 100%;
 	height: 500px;
@@ -12,6 +10,9 @@ const Container = styled.div`
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+  @media (max-width: ${({theme}) => theme.sizes.tablet}) {
+    background-size: cover;
+  }
 `;
 
 const Title = styled.p`
@@ -30,17 +31,21 @@ const TitleContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  flex-direction: row;
+  @media (max-width: ${({theme}) => theme.sizes.tablet}) {
+    flex-direction: column;
+  }
 	top: 0px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
 `;
 
-const MainImage = () => {
+const MainImage = ({backgroundImage, title, secondTitle}) => {
 	return (
 		<Container image={backgroundImage} id='Home'>
 			<TitleContainer>
-				<Title>Voley&nbsp;</Title><TitleThin>Scoreboard</TitleThin>
+				<Title>{title}&nbsp;</Title><TitleThin>{secondTitle}</TitleThin>
 			</TitleContainer>
 		</Container>
 	);

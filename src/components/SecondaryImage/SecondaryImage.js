@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import backgroundImage from './../../assets/background2.jpeg';
-
 const Container = styled.div`
 	width: 100%;
 	height: 500px;
@@ -14,7 +12,7 @@ const Container = styled.div`
 	background-size: cover;
 `;
 
-const SecondaryImage = () => {
+const SecondaryImage = ({backgroundImage}) => {
 	return (
 		<Container image={backgroundImage} />
 	);

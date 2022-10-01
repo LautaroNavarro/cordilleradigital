@@ -48,7 +48,9 @@ const SupportInstruction = ({title, description}) => {
 	);
 }
 
-const Support = () => {
+const Support = ({
+  items=[]
+}) => {
 	return (
 		<Container>
 			<WidthContainer>
@@ -59,38 +61,14 @@ const Support = () => {
 					<Line />
 				</TitleContainer>
 				<WidthContainer width={80}>
-					<SupportInstruction
-						title={'How to turn off sounds?'}
-						description={'Drag from the left of the screen to the right to open the Drawer. Then search the toggle with the label "Sounds" and make sure it is off.'}
-					/>
-					<SupportInstruction
-						title={'How to turn off dark mode?'}
-						description={'Drag from the left of the screen to the right to open the Drawer. Then search the toggle with the label "Dark mode" and make sure it is off.'}
-					/>
-					<SupportInstruction
-						title={'How to create a match?'}
-						description={'In the home section click on "New Match" then configure your match with the desired sets, team names and colors and then click on "Create Match".'}
-					/>
-					<SupportInstruction
-						title={'How to create an online match?'}
-						description={'In the home section click on "New Match" then configure your match with the desired sets, team names and colors, then enable the "Online match" toggle and finally click on "Create Match".'}
-					/>
-					<SupportInstruction
-						title={'How to join an online match?'}
-						description={'In the home section, write down the access code of the match in the access code input and then click the "Join match" button.'}
-					/>
-					<SupportInstruction
-						title={'How to share the access code of my online match?'}
-						description={'In the match view, click on the access code, it will be copied automatically to your clipboard, then share it with your friends.'}
-					/>
-					<SupportInstruction
-						title={'How to change the language?'}
-						description={'Drag from the left of the screen to the right to open the Drawer. Then search the dropdown with the label "Language", there you will find a list of the available languages.'}
-					/>
-					<SupportInstruction
-						title={'How to switch teams position?'}
-						description={'In the match view, click the two arrows icon between the two score boards, it will switch the teams position.'}
-					/>
+          {
+            items.map(item => (
+              <SupportInstruction
+                title={item.title}
+                description={item.description}
+              />
+            ))
+          }
 				</WidthContainer>
 				<Spacer height={60}/>
 			</WidthContainer>

@@ -1,21 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMoon, faVolumeHigh, faGlobe, faBellConcierge } from '@fortawesome/free-solid-svg-icons'
 
 import {Title, TitleContainer, TitleThin, Line} from './../Title/Title';
 import Spacer from './../Spacer/Spacer';
 import WidthContainer from './../WidthContainer/WidthContainer';
-import backgroundImage from './../../assets/background.webp';
 
 const Container = styled.div`
 	width: 100%;
 	display: flex;
+  @media (max-width: ${({theme}) => theme.sizes.tablet}) {
+    flex-direction: column;
+  }
 	justify-content: space-between;
 `;
 
 const BoxContainer = styled.div`
 	width: 24%;
+  @media (max-width: ${({theme}) => theme.sizes.tablet}) {
+    width: 100%;
+    margin-top: 20px;
+  }
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -23,12 +28,17 @@ const BoxContainer = styled.div`
 `;
 
 
-const Box = ({icon, title, description}) => {
+const Box = ({icon, title, description, backgroundImage}) => {
 
 	const ImageContainer = styled.div`
 		width: 10vw;
 		height: 10vw;
 		border-radius: 10vw;
+    @media (max-width: ${({theme}) => theme.sizes.tablet}) {
+      width: 30vw;
+      height: 30vw;
+      border-radius: 30vw;
+    }
 		background-image: url(${backgroundImage});
 		background-attachment: fixed;
 		background-position: center;
@@ -40,20 +50,25 @@ const Box = ({icon, title, description}) => {
 	`;
 
 	const ImageOverlay = styled.div`
-		border-radius: 10vw;
 		background-color: rgba(0, 0, 0, 0.5);
 		display: flex;
 		justify-content: center;
 		align-items: center;
+    border-radius: 10vw;
 		width: 10vw;
 		height: 10vw;
+    @media (max-width: ${({theme}) => theme.sizes.tablet}) {
+      width: 30vw;
+      height: 30vw;
+      border-radius: 30vw;
+    }
 	`;
 
 	return (
 		<BoxContainer>
 			<ImageContainer>
 				<ImageOverlay>
-					<FontAwesomeIcon icon={icon} size="4x" inverse/>
+					<FontAwesomeIcon icon={icon} size="3x" inverse/>
 				</ImageOverlay>
 			</ImageContainer>
 			<Spacer height={30}/>
@@ -64,7 +79,7 @@ const Box = ({icon, title, description}) => {
 	);
 };
 
-const Boxes = () => {
+const Boxes = ({nameOne, nameTwo, nameThree, boxes, backgroundImage}) => {
 	return (
 		<WidthContainer>
 			<Spacer height={30}/>
@@ -74,10 +89,9 @@ const Boxes = () => {
 				<Line />
 			</TitleContainer>
 			<Container>
-				<Box title={'Online'} description={'Online real time matches. Available everywhere'} icon={faGlobe}/>
-				<Box title={'Dark mode'} description={'Nice and clean, switchables dark and light modes'} icon={faMoon}/>
-				<Box title={'Sounds'} description={'Sounds for score board controls in both, online and offline mode'} icon={faVolumeHigh}/>
-				<Box title={'Support'} description={'Active development team to support bugs fixing and new features requests'} icon={faBellConcierge}/>
+        {
+          boxes.map(box => <Box backgroundImage={backgroundImage} title={box.title} description={box.description} icon={box.icon}/>)
+        } 
 			</Container>
 			<Spacer height={100}/>
 		</WidthContainer>

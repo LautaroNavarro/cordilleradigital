@@ -14,23 +14,27 @@ const PolicyText = styled.p`
 	color: ${({theme}) => theme.colors.text};
 `;
 
-const PrivacyPolicy = () => {
+const PrivacyPolicy = ({
+  titleOne='Privacy',
+  titleTwo='Policy',
+  title='We collect no personal information using our application',
+  policyTexts=[],
+}) => {
 	return (
 		<Container>
 			<WidthContainer>
 				<Spacer height={30}/>
 				<TitleContainer>
 					<Line />
-					<Title id='PrivacyPolicy' left fontSize={20}>Privacy</Title><TitleThin right fontSize={20}>&nbsp;Policy</TitleThin>
+					<Title id='PrivacyPolicy' left fontSize={20}>{titleOne}</Title><TitleThin right fontSize={20}>&nbsp;{titleTwo}</TitleThin>
 					<Line />
 				</TitleContainer>
 				<div>
-					<Title>We collect no personal information using our application</Title>
+					<Title>{title}</Title>
 					<Spacer height={20}/>
-					<PolicyText>We do not collect, use, save, or have access to any of your personal data recorded in VoleyScoreBoard for iOS.</PolicyText>
-					<PolicyText>
-						Individual settings relating to the VoleyScoreBoard app are not personal and are stored only on your Device.
-					</PolicyText>
+          {
+            policyTexts.map(policyText => <PolicyText>{policyText}</PolicyText>)
+          }
 				</div>
 				<Spacer height={60}/>
 			</WidthContainer>
