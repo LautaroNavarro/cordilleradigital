@@ -1,32 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import background from './../../assets/voleybackground.webp';
-import logo from './../../assets/logo.png'
 import WidthContainer from './../WidthContainer/WidthContainer';
 import Row from './../Row/Row';
 
 const Container = styled.div`
 	height: 80px;
 	background-color: ${({theme}) => theme.colors.background};
-`;
-
-const Logo = styled.img`
-	width: 40px;
-	height: 40px;
-`;
-
-const Background = styled.img`
-	width: 100vw;
-	height: 500px;
-	object-fit: cover;
-	-webkit-filter: blur(10px);
-	-moz-filter: blur(10px);
-	-o-filter: blur(10px);
-	-ms-filter: blur(10px);
-	filter: blur(10px);
-	position: absolute;
-	opacity: 0.2;
 `;
 
 const StyledRow = styled(Row)`
@@ -72,7 +52,6 @@ const NavBar = () => {
 				<WidthContainer>
 					<StyledRow>
 						<StyledRow>
-							{/*<Logo src={logo} />*/}
 							<Title onClick={clickLogo}>Cordillera Digital</Title>
 						</StyledRow>
 						<RightItems>

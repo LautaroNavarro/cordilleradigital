@@ -62,7 +62,7 @@ const TwoColumnsSection = ({
   idParameter='',
 }) => {
 	return (
-		<Container>
+		<Container id='Apps'>
 			<WidthContainer>
 			<Spacer height={30}/>
 			<TitleContainer>

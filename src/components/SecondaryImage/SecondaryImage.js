@@ -10,6 +10,9 @@ const Container = styled.div`
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	@media (max-width: ${({theme}) => theme.sizes.tablet}) {
+		background-attachment: scroll;
+  }
 `;
 
 const SecondaryImage = ({backgroundImage}) => {

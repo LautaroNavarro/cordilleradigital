@@ -17,7 +17,7 @@ const Text = styled.p`
 const Footer = () => {
 	return (
 		<Container>
-			<Text>cordillera.digital</Text>
+			<Text>cordilleradigital.com</Text>
 		</Container>
 	);
 };

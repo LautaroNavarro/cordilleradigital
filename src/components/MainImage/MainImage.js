@@ -11,14 +11,14 @@ const Container = styled.div`
 	background-repeat: no-repeat;
 	background-size: cover;
   @media (max-width: ${({theme}) => theme.sizes.tablet}) {
-    background-size: cover;
+		background-attachment: scroll;
   }
 `;
 
 const Title = styled.p`
 	color: ${({theme}) => theme.colors.text};
 	text-transform: uppercase;
-	font-size: 60px;
+	font-size: 50px;
 	font-weight: bold;
 `;
 

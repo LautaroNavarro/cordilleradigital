@@ -17,9 +17,20 @@ const MediaContainer = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 40px;
+  @media (max-width: ${({theme}) => theme.sizes.tablet}) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+  }
 `;
 
 const SocialMediaSection = styled.div`
+  @media (max-width: ${({theme}) => theme.sizes.tablet}) {
+    width: 80%;
+    text-align: center;
+    margin-top: 40px;
+  }
 `;
 
 const Title = styled.h1`
@@ -34,16 +45,17 @@ const Link = styled.a`
 
 const ContactUs = () => {
   return (
-    <Container>
+    <Container id='Contact'>
       <Title>CONTACT US</Title>
       <MediaContainer>
         <SocialMediaSection>
           <Title>Email</Title>
-          <Link href='mailto:navarro_lautaro@hotmail.com'><h3>navarro_lautaro@hotmail.com</h3></Link>
+          <Link href='mailto:kevin@cordilleradigital.com'><h3>kevin@cordilleradigital.com</h3></Link>
+          <Link href='mailto:lautaro@cordilleradigital.com'><h3>lautaro@cordilleradigital.com</h3></Link>
         </SocialMediaSection>
         <SocialMediaSection>
-          <Title>Linkedin</Title>
-          <Link href='https://www.linkedin.com/in/lautaro-navarro/'><h3>Lautaro Navarro</h3></Link>
+          <Title>Social Media</Title>
+          <Link href='https://www.linkedin.com/company/cordillera-digital-software'><h3>Linkedin</h3></Link>
         </SocialMediaSection>
       </MediaContainer>
     </Container>

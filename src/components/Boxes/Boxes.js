@@ -38,6 +38,7 @@ const Box = ({icon, title, description, backgroundImage}) => {
       width: 30vw;
       height: 30vw;
       border-radius: 30vw;
+			background-attachment: scroll;
     }
 		background-image: url(${backgroundImage});
 		background-attachment: fixed;

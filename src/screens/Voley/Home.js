@@ -20,10 +20,10 @@ import TwoColumnsSection from './../../components/TwoColumnsSection/TwoColumnsSe
 import PrivacyPolicy from './../../components/PrivacyPolicy/PrivacyPolicy';
 import Support from './../../components/Support/Support';
 import backgroundImageTwo from './../../assets/voleybackground2.webp';
-import screenShot1 from './../../assets/voley-screenshot-1.png';
-import screenShot2 from './../../assets/voley-screenshot-2.png';
-import screenShot3 from './../../assets/voley-screenshot-3.png';
-import screenShot4 from './../../assets/voley-screenshot-4.png';
+import screenShot1 from './../../assets/voley-screenshot-1.webp';
+import screenShot2 from './../../assets/voley-screenshot-2.webp';
+import screenShot3 from './../../assets/voley-screenshot-3.webp';
+import screenShot4 from './../../assets/voley-screenshot-4.webp';
 
 const Home = () => {
   return (
