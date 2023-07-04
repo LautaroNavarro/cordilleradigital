@@ -32,6 +32,9 @@ const LocalDescription = styled.p`
 `;
 
 const IconContainer = styled(WidthContainer)`
+  @media (max-width: ${({theme}) => theme.sizes.tablet}) {
+    margin-right: 10px;
+  }
 	width: 5%;
 	margin-top: 3.5px;
 	display: flex;

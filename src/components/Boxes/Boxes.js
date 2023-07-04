@@ -86,7 +86,7 @@ const Boxes = ({nameOne, nameTwo, nameThree, boxes, backgroundImage}) => {
 			<Spacer height={30}/>
 			<TitleContainer>
 				<Line />
-				<Title left fontSize={20}>WHAT</Title><TitleThin right fontSize={20}>&nbsp;WE&nbsp;DO?</TitleThin>
+				<Title left fontSize={20}>WHAT</Title><TitleThin right fontSize={20}>&nbsp;DO&nbsp;WE&nbsp;DO?</TitleThin>
 				<Line />
 			</TitleContainer>
 			<Container>
